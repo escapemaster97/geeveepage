@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GEEVEE Enterprise</title>
+    <title>GV Enterprise</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <style>
         body {
             display: flex;
@@ -13,7 +14,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url('/background.JPG'); /* Update this path if necessary */
+            background-image: url('/background.jpg'); /* Update this path if necessary */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -21,19 +22,25 @@
         .banner {
             text-align: center;
             padding: 50px;
-            background-color: rgba(255, 255, 255, 0.8);
+            background-color: rgba(255, 255, 255, 0.9);
             border: 2px solid #000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             max-width: 90%;
             margin: 20px;
+            animation: fadeIn 2s;
+        }
+        .banner img {
+            max-width: 150px;
+            margin-bottom: 20px;
         }
         .banner h1 {
-            font-size: 2.5em;
+            font-size: 3em;
             margin: 0 0 20px;
+            color: #007BFF;
         }
         .banner p {
             font-size: 1.5em;
-            color: #555;
+            color: #333;
         }
         .button {
             margin-top: 20px;
@@ -44,16 +51,21 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         .button:hover {
             background-color: #0056b3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
         @media (max-width: 768px) {
             .banner {
                 padding: 30px;
             }
             .banner h1 {
-                font-size: 2em;
+                font-size: 2.5em;
             }
             .banner p {
                 font-size: 1.2em;
@@ -64,7 +76,7 @@
                 padding: 20px;
             }
             .banner h1 {
-                font-size: 1.5em;
+                font-size: 2em;
             }
             .banner p {
                 font-size: 1em;
@@ -78,16 +90,17 @@
 </head>
 <body>
     <div class="banner">
-        <h1>Hi Welcome to GEEVEE Enterprise</h1>
-        <p>We will be live soon</p>
-        <button class="button" onclick="triggerConfetti()">Celebrate!</button>
+        <img src="/logo.png" alt="GV Enterprise Logo"> <!-- Add your logo here -->
+        <h1>Hi Welcome to GV Enterprise!</h1>
+        <p>We're on the verge of something amazing. Get ready for unparalleled technical expertise to elevate your business to new heights. Our team of experts is dedicated to bringing you the best solutions in the tech world. Stay tuned and be prepared for the launch of a lifetime!</p>
+        <button class="button" onclick="triggerConfetti()">Celebrate with Us!</button>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
     <script>
         function triggerConfetti() {
             confetti({
-                particleCount: 100,
+                particleCount: 150,
                 spread: 70,
                 origin: { y: 0.6 }
             });
