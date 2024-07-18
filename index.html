@@ -12,7 +12,7 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background-image: url('/background.JPG');
+            background-image: url('/background.jpg'); /* Update this path if necessary */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -23,6 +23,8 @@
             background-color: rgba(255, 255, 255, 0.8);
             border: 2px solid #000;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 90%;
+            margin: 20px;
         }
         .banner h1 {
             font-size: 2.5em;
@@ -31,6 +33,28 @@
         .banner p {
             font-size: 1.5em;
             color: #555;
+        }
+        @media (max-width: 768px) {
+            .banner {
+                padding: 30px;
+            }
+            .banner h1 {
+                font-size: 2em;
+            }
+            .banner p {
+                font-size: 1.2em;
+            }
+        }
+        @media (max-width: 480px) {
+            .banner {
+                padding: 20px;
+            }
+            .banner h1 {
+                font-size: 1.5em;
+            }
+            .banner p {
+                font-size: 1em;
+            }
         }
     </style>
 </head>
